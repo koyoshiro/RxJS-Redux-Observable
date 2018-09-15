@@ -5,12 +5,13 @@ import {Provider} from "react-redux";
 import {configureStore} from "./Store";
 import {serverContainer} from "./Container/serverContainer";
 
-
 const store = configureStore();
 
 ReactDOM.render(
-    <Provider store={store}>
-      <serverContainer/>
-    </Provider>,
+    <View>
+      <Provider store={store}>
+      <div component={serverContainer}></div>
+      </Provider>
+    </View>,
     document.getElementById('root')
 );
